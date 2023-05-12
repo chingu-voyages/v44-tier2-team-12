@@ -48,12 +48,39 @@ main {
   padding: 1em 1.5em;
   border-radius: 8px;
 }
-footer {
-  /* position: sticky; */
-  /* height: 100%; */
-  /* top: 100vh; */
-  /* background-color: #312e2b; */
+
+label,
+input,
+select {
+  display: block;
 }
+
+input,
+select {
+  padding: 0.5em 1em;
+  border: 1.5px solid #e8e9ed;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid #319756;
+}
+
+input:focus[value=""] {
+  border: 1.5px solid #f7336f;
+}
+/* Range/slider */
+.speed-container {
+  color: #319756;
+}
+
+/* footer { */
+/* position: sticky; */
+/* height: 100%; */
+/* top: 100vh; */
+/* background-color: #312e2b; */
+/* } */
 
 @media (min-width: 768px) {
 }
