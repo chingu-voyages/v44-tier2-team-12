@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { useBotsContext } from "../context/bot_context";
 
 const Arena = () => {
+  const { sample } = useBotsContext();
+  console.log(sample);
   return (
     <Wrapper>
       <canvas></canvas>
