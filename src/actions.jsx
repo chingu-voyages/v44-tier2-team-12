@@ -1,0 +1,2 @@
+export const SET_BATTLE_START = "SET_BATTLE_START";
+export const SET_BATTLE_STOP = "SET_BATTLE_STOP";

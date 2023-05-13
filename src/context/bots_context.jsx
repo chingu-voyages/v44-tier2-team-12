@@ -5,7 +5,7 @@ const initialState = {
   boolean_operation: "AND",
   speed: 0,
   isBattleStarted: false,
-  isBattleStopped: false,
+  isBattleEnded: false,
   animationFrame: null,
 };
 
