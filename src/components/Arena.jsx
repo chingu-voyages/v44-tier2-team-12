@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useBotsContext } from "../context/bot_context";
+import { useBotsContext } from "../context/bots_context";
 
 const Arena = () => {
   const { sample } = useBotsContext();
