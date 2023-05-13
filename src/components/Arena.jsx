@@ -3,12 +3,13 @@ import styled from "styled-components";
 import { useBotsContext } from "../context/bots_context";
 
 const Arena = () => {
-  const { sample } = useBotsContext();
-  console.log(sample);
+  const { isBattleStarted, setBattleStart, setBattleStop } = useBotsContext();
+  console.log(isBattleStarted);
   return (
-    <Wrapper>
-      <canvas></canvas>
-    </Wrapper>
+    //   <Wrapper>
+    //     <canvas></canvas>
+    //   </Wrapper>
+    <button onClick={setBattleStart}>start battle</button>
   );
 };
 

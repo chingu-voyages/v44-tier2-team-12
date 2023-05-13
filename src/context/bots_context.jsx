@@ -1,4 +1,6 @@
 import { useContext, useReducer, useEffect, createContext } from "react";
+import botsReducer from "../reducers/bots_reducer";
+import { SET_BATTLE_START, SET_BATTLE_STOP } from "../actions";
 
 const initialState = {
   bots: [],
@@ -12,9 +14,18 @@ const initialState = {
 const BotContext = createContext();
 
 export const BotsProvider = ({ children }) => {
-  const sample = "testing...";
+  const [state, dispatch] = useReducer(botsReducer, initialState);
+
+  const setBattleStart = () => {
+    dispatch({ type: SET_BATTLE_START });
+  };
+  const setBattleStop = () => {
+    dispatch({ type: SET_BATTLE_STOP });
+  };
   return (
-    <BotContext.Provider value={{ sample }}>{children}</BotContext.Provider>
+    <BotContext.Provider value={{ ...state, setBattleStart, setBattleStop }}>
+      {children}
+    </BotContext.Provider>
   );
 };
 
