@@ -1,4 +1,4 @@
-import Arena from "./components/arena/index";
+import Arena from "./components/Arena";
 
 const App = () => {
   return (
