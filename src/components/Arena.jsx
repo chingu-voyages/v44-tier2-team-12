@@ -17,12 +17,17 @@ const Arena = () => {
     canvas.width = canvas_width;
     canvas.height = canvas_height;
 
-    const result = getRandomPlacements(
+    const randomPlacementResults = getRandomPlacements(
       canvas_width,
       canvas_height,
       bots.length
     );
-    console.log(result);
+
+    for (let i = 0; i < randomPlacementResults.length; i++) {
+      bots[i].xPosition = randomPlacementResults[i].x;
+      bots[i].yPosition = randomPlacementResults[i].y;
+      bots[i].draw(context);
+    }
   }, []);
 
   return (
