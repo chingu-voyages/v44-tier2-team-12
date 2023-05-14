@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useBotsContext } from "../context/bots_context";
-import { getRandomPlacements } from "../utils/helpers";
+import { getRandomPlacements, checkCollision } from "../utils/helpers";
 const Arena = () => {
-  const { setCanvas, setCanvasContext, bots } = useBotsContext();
+  const { setCanvas, setCanvasContext, bots, canvasContext } = useBotsContext();
+
+  var canvas_height = "448";
+  var canvas_width = "448";
 
   useEffect(() => {
     const canvas = document.querySelector("canvas");
     setCanvas(canvas);
     const context = canvas.getContext("2d");
     setCanvasContext(context);
-
-    var canvas_height = "448";
-    var canvas_width = "448";
 
     canvas.width = canvas_width;
     canvas.height = canvas_height;
@@ -30,10 +30,33 @@ const Arena = () => {
     }
   }, []);
 
+  const animateBots = function () {
+    let animationFrame = requestAnimationFrame(animateBots);
+
+    if (bots.length === 1) {
+      cancelAnimationFrame(animationFrame);
+    }
+
+    canvasContext.clearRect(0, 0, canvas_width, canvas_height);
+
+    bots.forEach((bot) => {
+      bot.update(canvasContext, canvas_width, canvas_height);
+    });
+
+    for (let i = 0; i < bots.length; i++) {
+      for (let j = i + 1; j < bots.length; j++) {
+        checkCollision(bots[i], bots[j], bots, animationFrame, animateBots);
+      }
+    }
+  };
+
   return (
-    <Wrapper>
-      <canvas></canvas>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <canvas></canvas>
+      </Wrapper>
+      <button onClick={animateBots}>Start Battle</button>
+    </>
   );
 };
 
