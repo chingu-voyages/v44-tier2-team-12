@@ -6,9 +6,10 @@ import {
   SET_CANVAS,
   SET_CANVAS_CONTEXT,
 } from "../actions";
+import { bots } from "../data";
 
 const initialState = {
-  bots: [],
+  bots: bots,
   boolean_operation: "AND",
   speed: 0,
   isBattleStarted: false,

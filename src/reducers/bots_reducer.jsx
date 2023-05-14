@@ -28,7 +28,6 @@ const bots_reducer = (state, action) => {
   }
 
   if (action.type == SET_CANVAS_CONTEXT) {
-    console.log(action.payload);
     return {
       ...state,
       canvasContext: action.payload,

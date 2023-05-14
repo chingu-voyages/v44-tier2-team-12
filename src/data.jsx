@@ -1,4 +1,4 @@
-import getRandomDirection from "./utils/helpers";
+import { getRandomDirection } from "./utils/helpers";
 
 export const bots = [
   {
