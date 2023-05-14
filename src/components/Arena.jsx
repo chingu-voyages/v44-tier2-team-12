@@ -9,6 +9,12 @@ const Arena = () => {
     setCanvas(canvas);
     const context = canvas.getContext("2d");
     setCanvasContext(context);
+
+    var canvas_height = "448";
+    var canvas_width = "448";
+
+    canvas.width = canvas_width;
+    canvas.height = canvas_height;
   }, []);
 
   return (
