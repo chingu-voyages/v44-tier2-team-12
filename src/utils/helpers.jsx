@@ -53,3 +53,31 @@ export const getRandomPlacements = (canvasWidth, canvasHeight, botsLength) => {
 const randomCoordinates = () => {
   return Math.floor(Math.random() * 8);
 };
+
+export const checkResult = (operator, bot1, bot2) => {
+  if (operator === "AND") {
+    if (bot1 === 1 && bot2 === 1) {
+      return "Win";
+    } else {
+      return "Tie";
+    }
+  } else if (operator === "OR") {
+    if (bot1 === 0 && bot2 === 0) {
+      return "Tie";
+    } else {
+      return "Win";
+    }
+  } else if (operator === "XOR") {
+    if ((bot1 === 0 && bot2 === 0) || (bot1 === 1 && bot2 === 1)) {
+      return "Tie";
+    } else {
+      return "Win";
+    }
+  } else if (operator === "NOR") {
+    if (bot1 === 0 && bot2 === 0) {
+      return "Win";
+    } else {
+      return "Tie";
+    }
+  }
+};
