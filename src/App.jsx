@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Arena from "./components/Arena";
 
 function App() {
   // f = first bot; s = second bot
@@ -147,6 +148,7 @@ function App() {
         </div>
         <div>
           <p>Arena</p>
+          <Arena />
         </div>
         <div>Leaderboard</div>
       </main>
