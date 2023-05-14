@@ -1,4 +1,4 @@
-export const geRandomDirection = () => {
+export const getRandomDirection = () => {
   const directions = [
     "north",
     "north-west",

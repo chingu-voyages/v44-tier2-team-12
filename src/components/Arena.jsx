@@ -1,15 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { useBotsContext } from "../context/bots_context";
-
+import { getRandomDirection } from "../utils/helpers";
 const Arena = () => {
   const { isBattleStarted, setBattleStart, setBattleStop } = useBotsContext();
-  console.log(isBattleStarted);
   return (
-    //   <Wrapper>
-    //     <canvas></canvas>
-    //   </Wrapper>
-    <button onClick={setBattleStart}>start battle</button>
+    <Wrapper>
+      <canvas></canvas>
+    </Wrapper>
   );
 };
 
