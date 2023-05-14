@@ -1,2 +1,4 @@
 export const SET_BATTLE_START = "SET_BATTLE_START";
 export const SET_BATTLE_STOP = "SET_BATTLE_STOP";
+export const SET_CANVAS = "SET_CANVAS";
+export const SET_CANVAS_CONTEXT = "SET_CANVAS_CONTEXT";
