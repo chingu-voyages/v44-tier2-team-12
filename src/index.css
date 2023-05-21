@@ -14,6 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 h1,
 h2,
 h3,
@@ -24,6 +25,7 @@ h6 {
   padding: 0.2em;
   margin: 0;
 }
+
 body {
   padding: 1em;
   min-height: 100vh;
@@ -75,6 +77,22 @@ input:focus[value=""] {
   color: #319756;
 }
 
+/* Arena */
+.arena {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-btn {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  color: white;
+  background-color: #319756;
+}
 /* footer { */
 /* position: sticky; */
 /* height: 100%; */

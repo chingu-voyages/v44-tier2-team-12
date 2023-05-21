@@ -55,7 +55,12 @@ const Arena = () => {
       <Wrapper>
         <canvas></canvas>
       </Wrapper>
-      <button onClick={animateBots}>Start Battle</button>
+      <button onClick={animateBots} className="btn start-btn">
+        Start Battle
+      </button>
+      <button onClick={animateBots} className="btn start-btn">
+        Stop Battle
+      </button>
     </>
   );
 };

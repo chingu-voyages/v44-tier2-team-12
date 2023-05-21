@@ -37,7 +37,7 @@ function App() {
           <h2>Apply to all bots:</h2>
           <form>
             <label>
-              Boolean Value
+              Boolean Operator
               <select
                 name="booleanOperator"
                 value={botsInfo.booleanOperator}
@@ -146,7 +146,7 @@ function App() {
             </label>
           </form>
         </div>
-        <div>
+        <div class="arena">
           <p>Arena</p>
           <Arena />
         </div>
@@ -157,7 +157,7 @@ function App() {
         <div>Game Config</div>
         <div>Boole Arena</div>
         <div>Leader boards</div>
-      </footer> 
+      </footer>
       */}
     </>
   );
