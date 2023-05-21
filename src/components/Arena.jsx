@@ -2,9 +2,12 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useBotsContext } from "../context/bots_context";
 import { getRandomPlacements, checkCollision } from "../utils/helpers";
+import { useState } from "react";
 
 const Arena = () => {
   const { setCanvas, setCanvasContext, bots, canvasContext } = useBotsContext();
+
+  const [isBattleStarted, setIsBattleStarted] = useState(false);
 
   var canvas_height = "448";
   var canvas_width = "448";
@@ -32,6 +35,8 @@ const Arena = () => {
   }, []);
 
   const animateBots = function () {
+    setIsBattleStarted(!isBattleStarted);
+
     let animationFrame = requestAnimationFrame(animateBots);
 
     if (bots.length === 1) {
@@ -56,11 +61,11 @@ const Arena = () => {
       <Wrapper>
         <canvas></canvas>
       </Wrapper>
-      <button onClick={animateBots} className="btn start-btn">
-        Start Battle
-      </button>
-      <button onClick={animateBots} className="btn start-btn">
-        Stop Battle
+      <button
+        onClick={animateBots}
+        className={`btn start-btn ${isBattleStarted ? "stop-btn" : ""}`}
+      >
+        {isBattleStarted ? "Stop Battle" : "Start Battle"}
       </button>
     </>
   );

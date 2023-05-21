@@ -113,16 +113,32 @@ input:focus[value=""] {
   flex-direction: column;
 }
 
+.bFaWHJ {
+  border: 15px solid #312e2b;
+  border-radius: 2rem;
+}
+
 .start-btn {
   margin: 2rem 0 0 0;
   padding: 1rem;
-  font-size: 15px;
+  font-size: 1.5rem;
+  font-family: "Bai Jamjuree";
   text-transform: uppercase;
   font-weight: bold;
+  border: none;
   border-radius: 7px;
   color: white;
   background-color: #319756;
 }
+
+.stop-btn {
+  /* Your custom styles for the "Stop Battle" state */
+  /* Example: */
+  background-color: #232020;
+  color: #319756;
+  border: 1px solid #319756;
+}
+
 /* footer { */
 /* position: sticky; */
 /* height: 100%; */
