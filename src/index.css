@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bai Jamjuree", sans-serif;
+  padding: 0.2em;
+  margin: 0;
+}
+
+body {
+  padding: 1em;
+  min-height: 100vh;
+  background-color: #232020;
+}
+
+header {
+  font-size: 1.5rem;
+  color: #82817f;
+  text-align: center;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.game-config {
+  background-color: #312e2b;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.game-config-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.label {
+  width: 260px;
+  margin: 5px 5px 5px 0;
+}
+
+.name {
+  width: 230px;
+  margin: 5px 5px 5px 0;
+}
+
+label,
+input,
+select {
+  display: block;
+}
+
+input,
+select {
+  padding: 0.5em 1em;
+  border: 1.5px solid #e8e9ed;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid #319756;
+}
+
+input:focus[value=""] {
+  border: 1.5px solid #f7336f;
+}
+
+.bot-first {
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.bot-second {
+  margin-bottom: 1.5rem;
+}
+
+/* Range/slider */
+.speed-container {
+  color: #319756;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.speed {
+  width: 225px;
+}
+
+/* Arena */
+.arena {
+  display: flex;
+  flex-direction: column;
+}
+
+.bFaWHJ {
+  border: 15px solid #312e2b;
+  border-radius: 2rem;
+}
+
+.start-btn {
+  margin: 2rem 0 0 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: "Bai Jamjuree";
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: #319756;
+}
+
+.stop-btn {
+  /* Your custom styles for the "Stop Battle" state */
+  /* Example: */
+  background-color: #232020;
+  color: #319756;
+  border: 1px solid #319756;
+}
+
+/* footer { */
+/* position: sticky; */
+/* height: 100%; */
+/* top: 100vh; */
+/* background-color: #312e2b; */
+/* } */
+/* TODO */
+
+@media (min-width: 768px) {
+}
