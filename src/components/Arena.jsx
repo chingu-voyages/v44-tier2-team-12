@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useBotsContext } from "../context/bots_context";
 import { getRandomPlacements, checkCollision } from "../utils/helpers";
+
 const Arena = () => {
   const { setCanvas, setCanvasContext, bots, canvasContext } = useBotsContext();
 

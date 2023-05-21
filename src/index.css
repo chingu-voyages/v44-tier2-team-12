@@ -33,7 +33,7 @@ body {
 }
 
 header {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #82817f;
   text-align: center;
   font-weight: bold;
@@ -49,6 +49,22 @@ main {
   background-color: #312e2b;
   padding: 1em 1.5em;
   border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.game-config-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.label {
+  width: 260px;
+  margin: 5px 5px 5px 0;
+}
+
+.name {
+  width: 230px;
+  margin: 5px 5px 5px 0;
 }
 
 label,
@@ -72,9 +88,23 @@ input:focus {
 input:focus[value=""] {
   border: 1.5px solid #f7336f;
 }
+
+.bot-first {
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.bot-second {
+  margin-bottom: 1.5rem;
+}
+
 /* Range/slider */
 .speed-container {
   color: #319756;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.speed {
+  width: 225px;
 }
 
 /* Arena */
@@ -84,8 +114,8 @@ input:focus[value=""] {
 }
 
 .start-btn {
-  margin-top: 20px;
-  padding: 15px;
+  margin: 2rem 0 0 0;
+  padding: 1rem;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
